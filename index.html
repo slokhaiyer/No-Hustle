@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Hobby Prompts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" onclick="goToMainPage()"><h1>No Hustle</h1></a>
+    </header>
+
+    <!-- Main Page: Hobby Cards -->
+    <div id="hobby-cards">
+        <h2>Explore Your Hobbies</h2>
+        <p>Select a hobby to get a new prompt every day.</p>
+        <div class="hobby-card" onclick="showCalendar('Story Writing')">Story Writing</div>
+        <div class="hobby-card" onclick="showCalendar('Drawing')">Drawing</div>
+        <div class="hobby-card" onclick="showCalendar('music')">Music (Listening/Creating)</div>
+        <div class="hobby-card" onclick="showCalendar('Photography')">Photography</div>
+        <div class="hobby-card" onclick="showCalendar('Journaling')">Journaling</div>
+        <div class="hobby-card" onclick="showCalendar('meditation/mindfulness')">Meditation/Mindfulness</div>
+        <!--<div class="hobby-card" onclick="showCalendar('fitness')">Fitness (Bodyweight exercises)</div>-->
+    </div>
+    <!-- Calendar View -->
+    <div id="calendar" style="display: none;">
+        <button onclick="goBack()">Take me back to hobbies</button>
+        <h2 id="hobby-title"></h2>
+        <div class="calendar-grid" id="calendar-grid">
+            <!-- Days will be generated here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Prompt Display -->
+    <div id="prompt-display" style="display: none;">
+        <p id="prompt-text"></p>
+        <button onclick="closePrompt()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>These prompts are only for you to get started. If you do not understand something, look it up - make GPT your friend to make the best use of these prompts. With <3 <a href="https://www.instagram.com/anythingandeveryth.in" target="_blank">@anythingandeveryth.in</a></p>
+    </footer>
+</body>
+</html>
